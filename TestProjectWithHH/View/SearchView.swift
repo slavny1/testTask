@@ -62,21 +62,6 @@ struct SearchView: View {
             CustomButtonView(style: .green, action: {}, title: "Еще 100 вакансий")
         }
     }
-
-    private mutating func getJobs() {
-        isJobReady = false
-        dataManager.getData { fetchedJobs in
-            DispatchQueue.main.async {
-                isJobReady = true
-                if let fetchedJobs = fetchedJobs {
-                    self.jobsToShow = fetchedJobs
-                } else {
-                    // Handle error or no data scenario
-                    print("Failed to fetch jobs.")
-                }
-            }
-        }
-    }
 }
 
 struct TopElementView: View {
