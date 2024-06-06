@@ -9,12 +9,8 @@ import SwiftUI
 
 struct SearchView: View {
 
+    @EnvironmentObject var vm: MainViewModel
     @State var search: String = ""
-
-    private let dataManager = DataManager()
-    private var isJobReady = false
-
-    var jobsToShow: [JobModel] = []
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -35,54 +31,39 @@ struct SearchView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    TopElementView(pic: "avatar", text: "Временная\nработа и подработка")
-                    TopElementView(pic: "avatar", text: "Временная\nработа и подработка")
-                    TopElementView(pic: "avatar", text: "Временная\nработа и подработка")
-                    TopElementView(pic: "avatar", text: "Временная\nработа и подработка")
+                    TopElementView(
+                        pic: "avatar",
+                        text: "Вакансии рядом с вами\n",
+                        button: nil
+                    )
+                    TopElementView(
+                        pic: "avatar",
+                        text: "Поднять резюме в поиске",
+                        button: "Поднять"
+                    )
+                    TopElementView(
+                        pic: "avatar",
+                        text: "Временная\nработа и подработка",
+                        button: nil
+                    )
+                    TopElementView(
+                        pic: "avatar",
+                        text: "Временная\nработа и подработка",
+                        button: nil
+                    )
                     Spacer()
                 }
             }
             Text("Вакансии для вас")
                 .font(.system(size: 20, weight: .semibold))
                 .padding(.vertical)
-            if !isJobReady {
-                Spacer()
-                HStack {
-                    Spacer()
-                    ProgressView("Идет загрузка")
-                    Spacer()
-                }
-                Spacer()
-            } else {
-                ScrollView {
-                    
-                }
+
+            List(vm.vacancies, id: \.self) { vacancy in
+                Text(vacancy.title)
             }
             Spacer()
             CustomButtonView(style: .green, action: {}, title: "Еще 100 вакансий")
         }
-    }
-}
-
-struct TopElementView: View {
-
-    let pic: String
-    let text: String
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Image(pic)
-                .padding(.bottom)
-            HStack {
-                Text(text)
-                    .font(.system(size: 14, weight: .medium))
-                Spacer()
-            }
-        }
-        .frame(width: 132)
-        .padding(10)
-        .background(Color("basicGrey"))
-        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

@@ -16,7 +16,6 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-
             if !isRegistered && !isCodeCorrect {
                 LoginView(email: $email, isRegistered: $isRegistered)
                     .zIndex(1)

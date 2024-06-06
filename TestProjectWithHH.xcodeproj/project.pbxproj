@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		13155D6B2C08A1F60063FCB0 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13155D6A2C08A1F60063FCB0 /* CodeView.swift */; };
-		13155D712C08D0380063FCB0 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13155D702C08D0380063FCB0 /* JobModel.swift */; };
-		13155D732C08D2F10063FCB0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13155D722C08D2F10063FCB0 /* DataManager.swift */; };
+		13155D712C08D0380063FCB0 /* Vacancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13155D702C08D0380063FCB0 /* Vacancies.swift */; };
+		13155D752C11B8EF0063FCB0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13155D742C11B8EF0063FCB0 /* MainViewModel.swift */; };
+		1379AC8F2C11C2D200B34E30 /* TopElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379AC8E2C11C2D200B34E30 /* TopElementView.swift */; };
 		137F8E3B2C061500002E08F9 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F8E3A2C061500002E08F9 /* TabItems.swift */; };
 		137F8E3D2C061570002E08F9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F8E3C2C061570002E08F9 /* LoginView.swift */; };
 		137F8E3F2C06200D002E08F9 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F8E3E2C06200D002E08F9 /* CustomButtonView.swift */; };
@@ -28,8 +29,9 @@
 
 /* Begin PBXFileReference section */
 		13155D6A2C08A1F60063FCB0 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
-		13155D702C08D0380063FCB0 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
-		13155D722C08D2F10063FCB0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		13155D702C08D0380063FCB0 /* Vacancies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancies.swift; sourceTree = "<group>"; };
+		13155D742C11B8EF0063FCB0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1379AC8E2C11C2D200B34E30 /* TopElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopElementView.swift; sourceTree = "<group>"; };
 		137F8E3A2C061500002E08F9 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		137F8E3C2C061570002E08F9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		137F8E3E2C06200D002E08F9 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		13155D6D2C08D0030063FCB0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1379AC8E2C11C2D200B34E30 /* TopElementView.swift */,
 				137F8E422C063F07002E08F9 /* CustomTFView.swift */,
 				137F8E3E2C06200D002E08F9 /* CustomButtonView.swift */,
 			);
@@ -88,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				137F8E3A2C061500002E08F9 /* TabItems.swift */,
-				13155D702C08D0380063FCB0 /* JobModel.swift */,
+				13155D702C08D0380063FCB0 /* Vacancies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,7 +132,7 @@
 			children = (
 				13E026992C06032F0021696D /* TestProjectWithHHApp.swift */,
 				13E0269B2C06032F0021696D /* ContentView.swift */,
-				13155D722C08D2F10063FCB0 /* DataManager.swift */,
+				13155D742C11B8EF0063FCB0 /* MainViewModel.swift */,
 				13155D6F2C08D0230063FCB0 /* Model */,
 				137F8E392C0614E0002E08F9 /* View */,
 				13E0269D2C0603310021696D /* Assets.xcassets */,
@@ -217,12 +220,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E0269C2C06032F0021696D /* ContentView.swift in Sources */,
-				13155D732C08D2F10063FCB0 /* DataManager.swift in Sources */,
 				137F8E432C063F07002E08F9 /* CustomTFView.swift in Sources */,
 				13E026AA2C060F050021696D /* HeartView.swift in Sources */,
 				137F8E3B2C061500002E08F9 /* TabItems.swift in Sources */,
 				137F8E412C0625E7002E08F9 /* Ext+View.swift in Sources */,
 				137F8E3D2C061570002E08F9 /* LoginView.swift in Sources */,
+				1379AC8F2C11C2D200B34E30 /* TopElementView.swift in Sources */,
 				13155D6B2C08A1F60063FCB0 /* CodeView.swift in Sources */,
 				13E026AE2C060F450021696D /* MessagesView.swift in Sources */,
 				137F8E3F2C06200D002E08F9 /* CustomButtonView.swift in Sources */,
@@ -230,7 +233,8 @@
 				13E026A82C060EDD0021696D /* SearchView.swift in Sources */,
 				13E026B02C060F590021696D /* ProfileView.swift in Sources */,
 				13E0269A2C06032F0021696D /* TestProjectWithHHApp.swift in Sources */,
-				13155D712C08D0380063FCB0 /* JobModel.swift in Sources */,
+				13155D712C08D0380063FCB0 /* Vacancies.swift in Sources */,
+				13155D752C11B8EF0063FCB0 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

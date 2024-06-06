@@ -7,20 +7,14 @@
 
 import SwiftUI
 
-
-/*
-пока я выполнял задание изменилось на приложение с авиабилетами. Отправил то, что сделал за последний день,
- а дальше ссылки были уже потеряны. Хорошего дня.
-
- */
-
 @main
 struct TestProjectWithHHApp: App {
-    
+    @StateObject var vm = MainViewModel()
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 ContentView()
+                    .environmentObject(vm)
             }
         }
     }
