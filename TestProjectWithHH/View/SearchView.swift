@@ -58,15 +58,38 @@ struct SearchView: View {
                 .font(.system(size: 20, weight: .semibold))
                 .padding(.vertical)
 
-            List(vm.vacancies, id: \.self) { vacancy in
-                Text(vacancy.title)
+            ScrollView {
+                ForEach(vm.vacancies.prefix(3), id: \.self) { vacancy in
+                    NavigationLink {
+                        ProfileView()
+                    } label: {
+                        CardView(vacancy: vacancy)
+                    }
+                }
             }
             Spacer()
-            CustomButtonView(style: .green, action: {}, title: "Еще 100 вакансий")
+            CustomButtonView(style: .green, action: {}, title: buttonTitle(for: vm.vacancies.count))
+        }
+    }
+
+    private func buttonTitle(for count: Int) -> String {
+        switch count {
+        case 0:
+            return "Еще 0 вакансий"
+        case 1:
+            return "Еще 1 вакансия"
+        case 2...4:
+            return "Еще \(count) вакансии"
+        default:
+            return "Еще \(count) вакансий"
         }
     }
 }
 
-#Preview {
-    SearchView()
+struct SearchView_Previews: PreviewProvider {
+    static var previews: some View {
+        let vm = MainViewModel()
+        return SearchView()
+            .environmentObject(vm)
+    }
 }
