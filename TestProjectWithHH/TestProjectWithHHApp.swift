@@ -15,6 +15,7 @@ struct TestProjectWithHHApp: App {
             NavigationStack {
                 ContentView()
                     .environmentObject(vm)
+                    .modelContainer(for: Favourite.self)
             }
         }
     }

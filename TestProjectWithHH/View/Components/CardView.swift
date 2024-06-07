@@ -9,7 +9,10 @@ import SwiftUI
 
 struct CardView: View {
 
+    @State var isFavourite: Bool
     let vacancy: Vacancy
+    let action: () -> Void
+
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
@@ -54,9 +57,10 @@ struct CardView: View {
             }
             Spacer()
             Button {
-                // add to favourites
+                action()
+                isFavourite.toggle()
             } label: {
-                Image("heart")
+                Image(isFavourite ? "heartFill" : "heartEmpty")
             }
         }
         .greyRoundedBg

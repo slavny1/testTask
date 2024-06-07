@@ -6,6 +6,16 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+final class Favourite {
+    @Attribute (.unique) var id: String
+
+    init(id: String) {
+        self.id = id
+    }
+}
 
 // MARK: - Job
 struct Vacancies: Codable {
